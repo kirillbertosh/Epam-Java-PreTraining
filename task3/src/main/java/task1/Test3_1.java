@@ -2,7 +2,7 @@ package task1;
 
 import task1.triangle.Util;
 
-public class Test1 {
+public class Test3_1 {
 
     public static void main(String[] args) {
         int x1 = 1;
