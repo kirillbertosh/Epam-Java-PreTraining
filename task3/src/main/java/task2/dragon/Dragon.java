@@ -2,7 +2,7 @@ package task2.dragon;
 
 public class Dragon {
 
-    public static int howManyHeads(int age) {
+    public static int getHeadsCount(int age) {
         int defaultHeadsCount = 3;
         if (age < 200) {
             return age * 3 + defaultHeadsCount;
