@@ -3,7 +3,7 @@ package task3.character;
 public class CharacterUtil {
 
     public static boolean isVowelWay1(char character) {
-        String vowelString = "aeiou";
+        String vowelString = "aeiouy";
         return vowelString.contains(Character.toString(character));
     }
 
@@ -13,13 +13,14 @@ public class CharacterUtil {
             case 'e' :
             case 'i' :
             case 'o' :
-            case 'u' : return true;
+            case 'u' :
+            case 'y' : return true;
         }
         return false;
     }
 
     public static boolean isVowelWay3(char character) {
-        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
         for (char vowel : vowels) {
             if (vowel == character) {
                 return true;
@@ -29,7 +30,7 @@ public class CharacterUtil {
     }
 
     public static boolean isVowelWay4(char character) {
-        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
         int i = 0;
         do {
             if (character == vowels[i]) {
