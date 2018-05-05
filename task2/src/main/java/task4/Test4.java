@@ -10,10 +10,10 @@ public class Test4 {
         System.out.println("First test number = " + firstTestNumber);
         System.out.println("Second test number = " + secondTestNumber);
 
-        System.out.println("Is first number ascending sequence " + Check.isAscendingSequence(firstTestNumber));
-        System.out.println("Is second number ascending sequence " + Check.isAscendingSequence(secondTestNumber));
+        System.out.println("Is first number ascending sequence " + Check.isFourDigitNumberAscendingSequence(firstTestNumber));
+        System.out.println("Is second number ascending sequence " + Check.isFourDigitNumberAscendingSequence(secondTestNumber));
 
-        System.out.println("Is first number descending sequence " + Check.isDescendingSequence(firstTestNumber));
-        System.out.println("Is second number descending sequence " + Check.isDescendingSequence(secondTestNumber));
+        System.out.println("Is first number descending sequence " + Check.isFourDigitNumberDescendingSequence(firstTestNumber));
+        System.out.println("Is second number descending sequence " + Check.isFourDigitNumberDescendingSequence(secondTestNumber));
     }
 }

@@ -2,7 +2,7 @@ package task4.check;
 
 public class Check {
 
-    public static boolean isAscendingSequence(int number) throws Exception {
+    public static boolean isFourDigitNumberAscendingSequence(int number) throws Exception {
         if (number < 1000) {
             throw new Exception("Number contains less than four digits");
         }
@@ -16,7 +16,7 @@ public class Check {
         return result != -1;
     }
 
-    public static boolean isDescendingSequence(int number) throws Exception {
+    public static boolean isFourDigitNumberDescendingSequence(int number) throws Exception {
         if (number < 1000) {
             throw new Exception("Number contains less than four digits");
         }

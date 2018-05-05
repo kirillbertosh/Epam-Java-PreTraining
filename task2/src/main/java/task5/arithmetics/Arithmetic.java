@@ -2,7 +2,7 @@ package task5.arithmetics;
 
 public class Arithmetic {
 
-    public static int countSumOfDigits(int number) throws Exception {
+    public static int countFiveDigitNumberSumOfDigits(int number) throws Exception {
         if (number < 10000) {
             throw new Exception("Number contains less than five digits");
         }
@@ -12,7 +12,7 @@ public class Arithmetic {
         return Integer.toString(number).chars().map(c -> Character.digit(c, 10)).sum();
     }
 
-    public static int countProductOfDigits(int number) throws Exception {
+    public static int countFiveDigitNUmberProductOfDigits(int number) throws Exception {
         if (number < 10000) {
             throw new Exception("Number contains less than five digits");
         }

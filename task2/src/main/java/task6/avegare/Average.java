@@ -2,7 +2,7 @@ package task6.avegare;
 
 public class Average {
 
-    public static double average(int number) throws Exception {
+    public static double getSixDigitNumberAverage(int number) throws Exception {
         if (number < 100000) {
             throw new Exception("Number contains less than five digits");
         }
@@ -16,7 +16,7 @@ public class Average {
                 .orElse(0);
     }
 
-    public static double geometric(int number) throws Exception {
+    public static double getSixDigitNumberGeometric(int number) throws Exception {
         if (number < 100000) {
             throw new Exception("Number contains less than six digits");
         }
