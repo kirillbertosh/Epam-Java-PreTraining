@@ -6,7 +6,11 @@ public class Queue {
 
     private int head = 0;
     private int tail = 0;
-    private Vehicle[] vehicles = new Vehicle[1];
+    private Vehicle[] vehicles;
+
+    public Queue() {
+        vehicles = new Vehicle[1];
+    }
 
     public void enqueue(Vehicle newVehicle) {
         if (!isQueueFull()) {
@@ -15,14 +19,16 @@ public class Queue {
         } else {
             Vehicle[] newVehicles = new Vehicle[vehicles.length * 3 / 2 + 1];
             System.arraycopy(vehicles, 0, newVehicles, 0, vehicles.length);
-            newVehicles[++tail] = newVehicle;
+            newVehicles[tail] = newVehicle;
+            tail++;
             vehicles = newVehicles;
         }
     }
 
     public Vehicle dequeue() {
         Vehicle vehicle = vehicles[head];
-        System.arraycopy(vehicles, 1, vehicle, 0, vehicles.length);
+        System.arraycopy(vehicles, 1, vehicles, 0, tail - 1);
+        tail--;
         return vehicle;
     }
 
@@ -39,6 +45,6 @@ public class Queue {
     }
 
     public boolean isQueueFull() {
-        return tail == vehicles.length - 1;
+        return vehicles[vehicles.length - 1] != null;
     }
 }

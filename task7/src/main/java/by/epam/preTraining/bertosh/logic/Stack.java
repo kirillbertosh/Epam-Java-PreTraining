@@ -31,9 +31,8 @@ public class Stack {
 
     public Vehicle pop() {
         if (!isStackEmpty()) {
-            Vehicle vehicle = vehicles[peakOfStack];
+            Vehicle vehicle = vehicles[--peakOfStack];
             vehicles[peakOfStack] = null;
-            peakOfStack--;
             return vehicle;
         } else {
             return null;

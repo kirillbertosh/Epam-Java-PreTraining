@@ -9,6 +9,9 @@ public class Util {
         Vehicle maxSpeedVehicle = park.getVehicles()[0];
         if (maxSpeedVehicle != null) {
             for (Vehicle vehicle : park.getVehicles()) {
+                if (vehicle == null) {
+                    return maxSpeedVehicle;
+                }
                 if (vehicle.getMaxSpeed() > maxSpeedVehicle.getMaxSpeed()) {
                     maxSpeedVehicle = vehicle;
                 }

@@ -7,11 +7,15 @@ import by.epam.preTraining.bertosh.util.Util;
 public class ParkManager {
 
     private String managerId;
-    public VehiclesPark park;
+    private VehiclesPark park;
+    private Stack stack;
+    private Queue queue;
 
     public ParkManager(String managerId, VehiclesPark park) {
         this.managerId = managerId;
         this.park = park;
+        stack = new Stack(10);
+        queue = new Queue();
     }
 
     public String getManagerId() {
@@ -35,4 +39,23 @@ public class ParkManager {
         return maxSpeedVehicle;
     }
 
+    public void pushVehicleToStack(Vehicle vehicle) {
+        stack.push(vehicle);
+    }
+
+    public Vehicle popVehicleFromStack() {
+        return stack.pop();
+    }
+
+    public Vehicle peekVehicleFromStack() {
+        return stack.peek();
+    }
+
+    public void addVehicleToQueue(Vehicle vehicle) {
+        queue.enqueue(vehicle);
+    }
+
+    public Vehicle getFromQueue() {
+        return queue.dequeue();
+    }
 }
