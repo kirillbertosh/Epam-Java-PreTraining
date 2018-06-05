@@ -37,4 +37,11 @@ public class Airplane extends Vehicle {
     public int hashCode() {
         return Objects.hash(model);
     }
+
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "model='" + model + '\'' +
+                '}';
+    }
 }

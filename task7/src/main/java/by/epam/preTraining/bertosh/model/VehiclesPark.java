@@ -1,5 +1,7 @@
 package by.epam.preTraining.bertosh.model;
 
+import java.util.Arrays;
+
 public class VehiclesPark {
 
     private int numOfCrafts = 0;
@@ -118,4 +120,12 @@ public class VehiclesPark {
         }
     }
 
+    @Override
+    public String toString() {
+        return "VehiclesPark{" +
+                "numOfCrafts=" + numOfCrafts +
+                ", vehicles=" + Arrays.toString(vehicles) +
+                ", peakOfStack=" + peakOfStack +
+                '}';
+    }
 }
