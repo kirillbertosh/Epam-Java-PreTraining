@@ -58,4 +58,13 @@ public abstract class Vehicle {
         if (Double.compare(vehicle.maxSpeed, maxSpeed) != 0) return false;
         return passengersNumber == vehicle.passengersNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "price=" + price +
+                ", maxSpeed=" + maxSpeed +
+                ", passengersNumber=" + passengersNumber +
+                '}';
+    }
 }

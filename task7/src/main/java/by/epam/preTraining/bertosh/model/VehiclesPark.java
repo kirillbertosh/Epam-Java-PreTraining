@@ -68,7 +68,7 @@ public class VehiclesPark {
         return false;
     }
 
-    public void addVehicleToPark(Vehicle newVehicle) {
+    public void addVehicle(Vehicle newVehicle) {
         Vehicle[] newVehicles;
 
         if (!isParkEmpty()) {
@@ -109,7 +109,7 @@ public class VehiclesPark {
         return null;
     }
 
-    public void deleteAllVehiclesFromPark(VehiclesPark park) {
+    public void deleteAllVehicles(VehiclesPark park) {
         if (!isParkEmpty()) {
             for (int i = 0; i <= peakOfStack; i++) {
                 vehicles[i] = null;
